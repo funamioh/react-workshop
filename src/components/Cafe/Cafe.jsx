@@ -4,6 +4,7 @@ import React from 'react';
 import "./Cafe.css";
 
 function Cafe({cafe}) {
+  console.log(cafe);
   return (
     <div className="cafe-card">
       <img src={cafe.picture} alt="cafe-img" />
@@ -11,7 +12,7 @@ function Cafe({cafe}) {
         <div>
           <h5>{cafe.title}</h5>
           <p>
-            {cafe.criteria.map( criterion => <span key={criterion}>{criterion}</span>)}
+            { cafe.criteria.map( criterion => <span key={criterion}>{criterion}</span>)}
           </p>
         </div>
         <a href="">Show on the map</a>

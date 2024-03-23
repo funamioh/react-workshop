@@ -3,12 +3,10 @@ import Cafe from "../Cafe/Cafe";
 import "./CafeList.css";
 
 // used rsf + Tab => creates skeleton of React Component
-function CafeList() {
-  const names = ["Dotor", "McDonald's", "Starbucks"];
-
+function CafeList({cafes}) {
   return (
     <div className='cafe-list'>
-      { names.map((cafe) =>
+      { cafes.map((cafe) =>
       <Cafe cafe={cafe} key={cafe} />)}
     </div>
   );
